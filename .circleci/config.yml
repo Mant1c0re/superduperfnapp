@@ -1,6 +1,6 @@
 version: 2.1
 orbs:
-  fn-cli: manticore/fn-cli@dev:0.0.5
+  fn-cli: manticore/fn-cli@dev:0.0.6
 jobs:
   build:
     docker:
