@@ -8,5 +8,5 @@ jobs:
     steps:
       - fn-cli/install
       - fn-cli/configure
-      - run: 'echo /tmp/oci_api_key.pem'
+      - run: 'cat /tmp/oci_api_key.pem'
       - fn-cli/list-apps
