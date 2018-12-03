@@ -1,6 +1,6 @@
 version: 2.1
 orbs:
-  fn-cli: mant1c0re/fn-cli@dev:0.0.3
+  fn-cli: mant1c0re/fn-cli@dev:0.0.4
 jobs:
   build:
     docker:
@@ -8,3 +8,4 @@ jobs:
     steps:
       - fn-cli/install
       - fn-cli/configure
+      - fn-cli/list-apps
