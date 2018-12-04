@@ -13,4 +13,4 @@ jobs:
 #         appname: superduperfnapp
       - run:
           name: "Deploy Fn"
-          command: fn deploy --app superduperfnapp --working-dir $CIRCLE_WORKING_DIRECTORY/hellofn
+          command: cd hellofn | fn deploy --app superduperfnapp
