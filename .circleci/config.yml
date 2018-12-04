@@ -12,6 +12,12 @@ jobs:
 # Commenting this as app created, but can't get ensure to work
 #      - fn-cli/ensure-app:
 #         appname: superduperfnapp
+      # update Docker
+      - run: |
+          docker version
+          sudo service docker stop
+          curl -fsSL https://get.docker.com/ | sudo sh
+      - run: docker version
       - run:
           name: "Deploy Fn"
           command: cd hellofn && fn deploy --app superduperfnapp
