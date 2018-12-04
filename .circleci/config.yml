@@ -4,7 +4,7 @@ orbs:
 jobs:
   build:
     machine: true
-    working_directory: ~/go/src/github.com/fnproject/cli
+    working_directory: ~/superduperfnapp
     steps:
       - fn-cli/install
       - fn-cli/configure
@@ -18,7 +18,7 @@ jobs:
           sudo service docker stop
           curl -fsSL https://get.docker.com/ | sudo sh
       - run: docker version
-      - run: printenv DOCKER_PASS | docker login -u $DOCKER_USER --password-stdin
+      - run: printenv DOCKER_PASS | docker login $PRIVATE_REGISTRY -u $DOCKER_USER --password-stdin
       - run:
           name: "Deploy Fn"
-          command: cd hellofn && fn deploy --app superduperfnapp
+          command: fn deploy --app superduperfnapp --working-dir ~/superduperfnapp/hellofn
