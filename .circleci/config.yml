@@ -12,7 +12,6 @@ jobs:
 # Commenting this as app created, but can't get ensure to work
 #      - fn-cli/ensure-app:
 #         appname: superduperfnapp
-      - run: ls
       - run:
           name: "Deploy Fn"
-          command: fn deploy --app superduperfnapp --working-dir ./hellofn
+          command: fn deploy --app superduperfnapp --working-dir hellofn
