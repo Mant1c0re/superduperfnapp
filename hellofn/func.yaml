@@ -1,6 +1,6 @@
 schema_version: 20180708
-name: hellofn
-version: 0.0.1
+name: hellofn2
+version: 0.0.5
 runtime: go
 entrypoint: ./func
 format: http-stream
