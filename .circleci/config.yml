@@ -25,4 +25,4 @@ jobs:
       - run: echo ~/.fn/contexts/oracle
       - run:
           name: "Invoke Fn"
-          command: DEBUG=1 fn invoke superduperfnapp hellofn2
+          command: DEBUG=1 fn invoke superduperfnapp hellofn
