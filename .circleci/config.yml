@@ -24,4 +24,4 @@ jobs:
           command: fn deploy --app superduperfnapp --working-dir ~/superduperfnapp/hellofn
       - run:
           name: "Invoke Fn"
-          command: DEBUG=1 fn invoke superduperfnapp hellofn
+          command: DEBUG=1 fn invoke superduperfnapp hellofn2
