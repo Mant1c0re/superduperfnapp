@@ -11,3 +11,6 @@ jobs:
       - run:
           name: "Create App"
           command: fn create app superduperfnapp --annotation oracle.com/oci/subnetIds="[\"$FN_APP_SUBNET_ID\"]"
+      -run:
+        name: "Deploy Fn"
+        command: fn deploy --app superduperfnapp --working-dir ./hellofn
