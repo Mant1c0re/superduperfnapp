@@ -1,6 +1,6 @@
 version: 2.1
 orbs:
-  fn-cli: manticore/fn-cli@dev:0.0.6
+  fn-cli: manticore/fn-cli@dev:0.0.7
 jobs:
   build:
     docker:
@@ -8,9 +8,8 @@ jobs:
     steps:
       - fn-cli/install
       - fn-cli/configure
-      - run:
-          name: "Create App"
-          command: fn create app superduperfnapp --annotation oracle.com/oci/subnetIds="[\"$FN_APP_SUBNET_ID\"]"
+      - fn-cli/ensure-app:
+          appname: superduperfnapp
       - run:
           name: "Deploy Fn"
           command: fn deploy --app superduperfnapp --working-dir ./hellofn
